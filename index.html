@@ -3,189 +3,636 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multezem Kedir - Portfolio</title>
+    <title>Multezem Kedir - Software Developer Portfolio</title>
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        header {
-            background: #1a202c;
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        header p {
-            margin: 0.5rem 0 0;
-            font-size: 1.2rem;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-        }
-
-        .section {
-            margin-bottom: 3rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 2rem;
-        }
-
-        h2 {
-            margin-bottom: 1rem;
-            color: #1a202c;
-            font-size: 1.8rem;
-        }
-
-        ul {
-            list-style: none;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
-        ul li {
-            margin: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            font-size: 16px;
         }
-
-        ul li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: #1a202c;
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
         }
-
-        .social-links a {
-            display: inline-block;
-            margin: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: #1a202c;
+        
+        header {
+            background-color: #2d3748;
             color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .social-links a:hover {
-            background: #2d3748;
-        }
-
-        footer {
+            padding: 40px 0;
             text-align: center;
-            padding: 1rem 0;
-            background: #1a202c;
+            margin-bottom: 30px;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .name {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .title {
+            font-size: 22px;
+            font-weight: 400;
+            color: #d1d5db;
+            margin-bottom: 20px;
+        }
+        
+        .profile-links {
+            margin-top: 20px;
+        }
+        
+        .profile-links a {
+            color: #d1d5db;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .profile-links a:hover {
             color: white;
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #5a67d8;
+        }
+        
+        .summary {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .skill-category {
+            margin-bottom: 15px;
+        }
+        
+        .skill-category-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #5a67d8;
+            font-size: 18px;
+        }
+        
+        .skill-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .skill-item {
+            background-color: #e5e7eb;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        .experience-item {
+            margin-bottom: 25px;
+            border-left: 3px solid #5a67d8;
+            padding-left: 20px;
+        }
+        
+        .job-header {
+            margin-bottom: 10px;
+        }
+        
+        .job-title {
+            font-weight: 600;
+            font-size: 20px;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+        
+        .company {
+            font-weight: 500;
+            color: #5a67d8;
+        }
+        
+        .period {
+            font-size: 14px;
+            color: #6b7280;
+            font-style: italic;
+        }
+        
+        .responsibilities {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .responsibilities li {
+            margin-bottom: 5px;
+        }
+        
+        .project-item {
+            background-color: #f9fafb;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 3px solid #5a67d8;
+        }
+        
+        .project-title {
+            font-weight: 600;
+            font-size: 20px;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+        
+        .project-period {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        
+        .project-description {
+            margin-bottom: 15px;
+        }
+        
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        
+        .project-tech-item {
+            background-color: #e5e7eb;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 14px;
+        }
+        
+        .github-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #5a67d8;
+            text-decoration: none;
+        }
+        
+        .github-link:hover {
+            text-decoration: underline;
+        }
+        
+        .expertise-card {
+            background-color: #f3f4f6;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 3px solid #5a67d8;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .expertise-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .expertise-title {
+            font-weight: 600;
+            font-size: 18px;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+        
+        .expertise-description {
+            line-height: 1.5;
+            color: #4b5563;
+        }
+        
+        footer {
+            background-color: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .expertise-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Multezem Kedir</h1>
-        <p>Delivering Impactful, Scalable, and Innovative Software Solutions</p>
+        <div class="header-content">
+            <h1 class="name">Multezem Kedir</h1>
+            <p class="title">Full Stack Software Developer</p>
+            <p>Portland, Oregon</p>
+            <div class="profile-links">
+                <a href="https://github.com/multekedir" target="_blank">GitHub</a> |
+                <a href="https://linkedin.com/in/multezemkedir" target="_blank">LinkedIn</a>
+            </div>
+        </div>
     </header>
-
+    
     <div class="container">
         <section class="section">
-            <h2>About Me</h2>
-            <p>Software Engineer with a strong foundation in backend development, microservices architecture, and DevOps. Passionate about delivering innovative solutions that drive efficiency, scalability, and success.</p>
-            <div class="social-links">
-                <a href="https://github.com/multekedir">GitHub</a>
-                <a href="https://www.linkedin.com/in/multezemkedir">LinkedIn</a>
-                <a href="mailto:kedirmultezem@gmail.com">Email</a>
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary">
+                Technically minded and results-driven Software Developer with extensive experience in designing and developing advanced full-stack microservices applications. Expertise in implementing customer-facing products, automating unit and end-to-end testing, and leading execution of key projects using Agile and Scrum methodologies. Skilled at maximizing platform reliability, availability, and scalability through cloud integration and deployment. Strong team player with excellent communication skills and a proven track record of resolving complex technical issues.
+            </p>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            
+            <div class="skill-category">
+                <h3 class="skill-category-title">Programming Languages</h3>
+                <div class="skill-items">
+                    <span class="skill-item">Python</span>
+                    <span class="skill-item">Java</span>
+                    <span class="skill-item">JavaScript</span>
+                    <span class="skill-item">TypeScript</span>
+                    <span class="skill-item">SQL</span>
+                    <span class="skill-item">TCL</span>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3 class="skill-category-title">Frontend</h3>
+                <div class="skill-items">
+                    <span class="skill-item">React</span>
+                    <span class="skill-item">Angular</span>
+                    <span class="skill-item">HTML5</span>
+                    <span class="skill-item">CSS3</span>
+                    <span class="skill-item">Bootstrap</span>
+                    <span class="skill-item">Chart.js</span>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3 class="skill-category-title">Backend</h3>
+                <div class="skill-items">
+                    <span class="skill-item">Flask</span>
+                    <span class="skill-item">Spring Framework</span>
+                    <span class="skill-item">Spring Web</span>
+                    <span class="skill-item">Spring Boot</span>
+                    <span class="skill-item">RESTful APIs</span>
+                    <span class="skill-item">Microservices</span>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3 class="skill-category-title">Databases</h3>
+                <div class="skill-items">
+                    <span class="skill-item">MySQL</span>
+                    <span class="skill-item">MongoDB</span>
+                    <span class="skill-item">Redis</span>
+                    <span class="skill-item">SQLite</span>
+                    <span class="skill-item">SQL Server</span>
+                    <span class="skill-item">SQLAlchemy</span>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3 class="skill-category-title">DevOps & Cloud</h3>
+                <div class="skill-items">
+                    <span class="skill-item">Git/GitHub</span>
+                    <span class="skill-item">Docker</span>
+                    <span class="skill-item">Jenkins</span>
+                    <span class="skill-item">AWS EC2</span>
+                    <span class="skill-item">AWS RDS</span>
+                    <span class="skill-item">AWS S3</span>
+                    <span class="skill-item">Heroku</span>
+                    <span class="skill-item">CI/CD</span>
+                    <span class="skill-item">Linux</span>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3 class="skill-category-title">Tools & Methodologies</h3>
+                <div class="skill-items">
+                    <span class="skill-item">Agile/Scrum</span>
+                    <span class="skill-item">Test-Driven Development</span>
+                    <span class="skill-item">JUnit</span>
+                    <span class="skill-item">Pivotal Tracker</span>
+                    <span class="skill-item">Kanban</span>
+                    <span class="skill-item">Asana</span>
+                    <span class="skill-item">ORM</span>
+                    <span class="skill-item">Windows Active Directory</span>
+                    <span class="skill-item">Buildkite</span>
+                    <span class="skill-item">Artifactory</span>
+                </div>
             </div>
         </section>
-
+        
         <section class="section">
-            <h2>Professional Experience</h2>
-            <h3>Software Engineer - Intel</h3>
-            <ul>
-                <li>Developed advanced electronic design automation tools using Python and TCL.</li>
-                <li>Led discussions on scalable architecture, improving system performance by 30%.</li>
-                <li>Designed automation frameworks, streamlining quality assurance processes.</li>
-            </ul>
-
-            <h3>Software Engineer - Novus Labs</h3>
-            <ul>
-                <li>Redesigned system architecture, achieving a 60% improvement in scalability.</li>
-                <li>Implemented CI/CD pipelines, reducing release cycles by 40%.</li>
-                <li>Built a QR Code Scanner leveraging Java and debugging expertise.</li>
-            </ul>
-
-            <h3>Software Engineer - Revature</h3>
-            <ul>
-                <li>Created full-stack applications with Angular and Spring frameworks.</li>
-                <li>Configured AWS infrastructure, ensuring 99.99% uptime and seamless scalability.</li>
-                <li>Integrated automated testing pipelines, increasing deployment efficiency by 50%.</li>
-            </ul>
-
-            <h3>IT Project Manager Intern - Multnomah County</h3>
-            <ul>
-                <li>Implemented Agile methodologies using Pivotal Tracker for project management.</li>
-                <li>Developed MySQL reports, improving system audit processes.</li>
-                <li>Collaborated with stakeholders to gather and document requirements.</li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h2>Key Projects</h2>
-            <h3>Prayer-Time-Display</h3>
-            <ul>
-                <li>Built a real-time scheduling solution for mosque prayer times and events.</li>
-                <li>Integrated notification systems for improved community engagement.</li>
-                <li>Currently deployed at the Eugene Islamic Center.</li>
-            </ul>
-
-            <h3>Microservice Architecture Transformation</h3>
-            <ul>
-                <li>Refactored a monolithic application into a modular microservices architecture.</li>
-                <li>Utilized Docker, Redis, and Celery to optimize task queuing and caching.</li>
-                <li>Enhanced scalability and reliability through Nginx load balancing.</li>
-            </ul>
-
-            <h3>PaintBox</h3>
-            <ul>
-                <li>Developed a collaborative art platform with Flask and PostgreSQL.</li>
-                <li>Automated deployment pipelines using GitHub Actions and Heroku.</li>
-                <li>Boosted query efficiency, enhancing user experience by 25%.</li>
-            </ul>
-
-            <h3>Caliber Trainer Report</h3>
-            <ul>
-                <li>Designed dynamic REST APIs with Spring Web and data visualization using Chart.js.</li>
-                <li>Streamlined team workflows with Agile methodologies and enhanced reporting features.</li>
-                <li>Improved testing coverage and reliability with end-to-end automation.</li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h2>Technical Expertise</h2>
+            <h2 class="section-title">Work Experience</h2>
+            
             <div class="experience-item">
-                <ul>
-                    <li>Languages: Python, Java, JavaScript/TypeScript, SQL</li>
-                    <li>Frontend: React, Angular, HTML5, CSS3, Redux</li>
-                    <li>Backend: Spring Boot, Flask, Node.js, RESTful APIs, GraphQL</li>
-                    <li>Cloud & DevOps: AWS, Docker, Kubernetes, Terraform, Jenkins</li>
-                    <li>Databases: PostgreSQL, MongoDB, Redis, Elasticsearch</li>
-                    <li>Tools: Git, JIRA, Maven, Gradle, Postman</li>
-                    <li>Methodologies: Agile/Scrum, TDD, CI/CD, Microservices Architecture</li>
+                <div class="job-header">
+                    <h3 class="job-title">EDA Software Engineer</h3>
+                    <p class="company">Intel Corporation</p>
+                    <p class="period">August 2022 - Present</p>
+                </div>
+                <ul class="responsibilities">
+                    <li>Utilize TCL to refine and sustain software tools integral to the electronic design automation process</li>
+                    <li>Enhance software performance by identifying and implementing potential improvements</li>
+                    <li>Develop and maintain tools for layout verification and design rule checking, automating repetitive tasks to optimize workflow efficiency</li>
+                    <li>Identify and resolve key bugs affecting production schedules while participating in code reviews and technical discussions</li>
+                    <li>Collaborate with cross-functional teams to implement solutions based on complex requirements</li>
+                    <li>Apply best practices for code quality and consistency throughout the development lifecycle</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <h3 class="job-title">Software Engineer</h3>
+                    <p class="company">Novus Labs</p>
+                    <p class="period">November 2020 - August 2022</p>
+                </div>
+                <ul class="responsibilities">
+                    <li>Wrote new tests, utilized Buildkite to conduct integration testing, and published new images/OS for embedded systems using Artifactory</li>
+                    <li>Drove 60% improvements in scalability and recognition rate through redevelopment of QR Code Scanner using Java BoofCV</li>
+                    <li>Leveraged Java Swing library to successfully develop an interactive user interface</li>
+                    <li>Devised best practices and techniques to debug code and optimized test coverage by 40%</li>
+                    <li>Built RESTful APIs supporting online/offline functionality for mobile applications</li>
+                    <li>Implemented CI/CD pipelines with Jenkins, reducing deployment time</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <h3 class="job-title">Software Engineer</h3>
+                    <p class="company">Revature</p>
+                    <p class="period">April 2020 - August 2020</p>
+                </div>
+                <ul class="responsibilities">
+                    <li>Collaborated with team to create design plan for implementation of object-relational mapping (ORM)</li>
+                    <li>Designed single page front-end and developed Java back-end using Angular TypeScript and Spring frameworks</li>
+                    <li>Configured AWS, RDS, and EC2 Linux, ensuring maximum scalability and uptime</li>
+                    <li>Standardized and deployed Maven and Jenkins for reliable continuous deployment in AWS, EC2, and S3</li>
+                    <li>Reduced cost and time by successfully automating unit and end-to-end testing</li>
+                    <li>Mitigated major bugs in production processes using test-driven development (TDD) and JUnit</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <h3 class="job-title">IT Project Manager Intern</h3>
+                    <p class="company">Multnomah County</p>
+                    <p class="period">June 2018 - September 2018</p>
+                </div>
+                <ul class="responsibilities">
+                    <li>Maintained adaptation of agile project management tool "Pivotal Tracker" to represent actual team progress</li>
+                    <li>Facilitated stakeholders in verifying and testing reports to discuss key bugs and remedies during stand-up meetings</li>
+                    <li>Contributed to verification of data for stakeholders by creating MySQL reports for newly constructed tax software using SQL Server Reporting Services</li>
+                    <li>Helped team retain accurate velocity and contributed to better future work projections</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <h3 class="job-title">SafeRide Driver</h3>
+                    <p class="company">Oregon State University</p>
+                    <p class="period">September 2017 - May 2018</p>
+                </div>
+                <ul class="responsibilities">
+                    <li>Provided inclusive, safe, and accessible alternatives to traveling alone at night</li>
+                    <li>Helped navigate drivers and ensure safety protocols were followed</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <h3 class="job-title">IT Engineer Intern</h3>
+                    <p class="company">Lam Research</p>
+                    <p class="period">June 2017 - September 2017</p>
+                </div>
+                <ul class="responsibilities">
+                    <li>Authored PowerShell scripts by creating documentation for improved readability and security</li>
+                    <li>Ensured adherence to set practices and security guidelines while creating coding standards</li>
+                    <li>Increased use of source code control by generating Git reference documentation to manage script usability and team member sharing</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <h3 class="job-title">IT Support</h3>
+                    <p class="company">University of Oregon</p>
+                    <p class="period">May 2015 - August 2017</p>
+                </div>
+                <ul class="responsibilities">
+                    <li>Provided expert-level IT support to staff of 10-20 members for day-to-day activities</li>
+                    <li>Maintained HP printers and Xerox copiers to prevent breakdowns and ensure continuous operation</li>
+                    <li>Scanned computers and deployed containers on Windows Active Directory</li>
+                    <li>Installed auxiliary software systems and monitored equipment to ensure 24/7 availability</li>
+                    <li>Diagnosed and troubleshot software, hardware, and network-related issues</li>
                 </ul>
             </div>
         </section>
+        
+        <section class="section">
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <div class="project-item">
+                <h3 class="project-title">Prayer Time Display Application</h3>
+                <p class="project-description">A comprehensive full-stack web application that calculates and displays prayer times for Islamic communities based on geographical coordinates and astronomical algorithms.</p>
+                <ul class="responsibilities">
+                    <li>Implemented complex astronomical algorithms for accurate prayer time calculations</li>
+                    <li>Created responsive interface adaptable to various display sizes</li>
+                    <li>Developed RESTful APIs for data synchronization</li>
+                    <li>Designed the application for 24/7 operation with robust error handling and recovery mechanisms</li>
+                </ul>
+                <div class="project-tech">
+                    <span class="project-tech-item">Python</span>
+                    <span class="project-tech-item">Flask</span>
+                    <span class="project-tech-item">JavaScript</span>
+                    <span class="project-tech-item">SQLite</span>
+                    <span class="project-tech-item">RESTful APIs</span>
+                </div>
+                <a href="https://github.com/multekedir/Prayer-Time-Display-2" class="github-link" target="_blank">View on GitHub (v2)</a>
+                <a href="https://github.com/multekedir/Prayer-Time-Display-" class="github-link" target="_blank" style="margin-left: 15px;">View on GitHub (v1)</a>
+            </div>
+            
+            <div class="project-item">
+                <h3 class="project-title">Caliber Trainer Report</h3>
+                <p class="project-period">Revature | March 2020 - August 2020</p>
+                <ul class="responsibilities">
+                    <li>Employed GitHub for source code management and Asana and Kanban board tools for efficient project management</li>
+                    <li>Used Spring Web to build a REST API and integrated spring frameworks for fast and lightweight application</li>
+                    <li>Leveraged data visualization free open-source JavaScript library 'Chart.js' to generate interactive graphs</li>
+                    <li>Assisted in evaluation of teamwork and ongoing performance by applying Agile/SCRUM methodologies</li>
+                    <li>Executed a customer-facing product by utilizing Angular in cross-functional collaboration with a team</li>
+                    <li>Facilitated in development of test plans to efficiently perform end to end testing</li>
+                </ul>
+                <div class="project-tech">
+                    <span class="project-tech-item">Spring Web</span>
+                    <span class="project-tech-item">Angular</span>
+                    <span class="project-tech-item">Chart.js</span>
+                    <span class="project-tech-item">Asana</span>
+                    <span class="project-tech-item">GitHub</span>
+                    <span class="project-tech-item">Kanban</span>
+                    <span class="project-tech-item">REST API</span>
+                </div>
+                <a href="https://github.com/multekedir/Caliber-Trainer-Report" class="github-link" target="_blank">View on GitHub</a>
+            </div>
+            
+            <div class="project-item">
+                <h3 class="project-title">PaintBox</h3>
+                <p class="project-period">Western Oregon University - Capstone | September 2019 - Present</p>
+                <ul class="responsibilities">
+                    <li>Automated process of software delivery by configuring and streamlining CI/CD pipeline using GitHub and Heroku</li>
+                    <li>Showcased outstanding performance by designing and implementing a Full Stack Python Flask application</li>
+                    <li>Implemented programming technique "object-relational mapping (ORM)" to optimize overall storage</li>
+                </ul>
+                <div class="project-tech">
+                    <span class="project-tech-item">Python</span>
+                    <span class="project-tech-item">Flask</span>
+                    <span class="project-tech-item">ORM</span>
+                    <span class="project-tech-item">CI/CD</span>
+                    <span class="project-tech-item">GitHub</span>
+                    <span class="project-tech-item">Heroku</span>
+                </div>
+                <a href="https://github.com/multekedir/PaintBox" class="github-link" target="_blank">View on GitHub</a>
+            </div>
+            
+            <div class="project-item">
+                <h3 class="project-title">Microservice Architecture</h3>
+                <p class="project-period">Western Oregon University | September 2019 - December 2019</p>
+                <ul class="responsibilities">
+                    <li>Utilized a cloud platform "Heroku" and a web serve "Nginx" to install Flask App and design load balancer respectively</li>
+                    <li>Exploited Python Flask, SQLAlchemy, and Mongo to reform a monolithic application into a micro-service</li>
+                    <li>Governed configuration resources through utilization of configuration as code (Docker)</li>
+                    <li>Optimized logging and user-facing code by exploiting Celery and Redis Queue</li>
+                </ul>
+                <div class="project-tech">
+                    <span class="project-tech-item">Python</span>
+                    <span class="project-tech-item">Flask</span>
+                    <span class="project-tech-item">Microservices</span>
+                    <span class="project-tech-item">SQLAlchemy</span>
+                    <span class="project-tech-item">MongoDB</span>
+                    <span class="project-tech-item">Docker</span>
+                    <span class="project-tech-item">Nginx</span>
+                    <span class="project-tech-item">Heroku</span>
+                    <span class="project-tech-item">Celery</span>
+                    <span class="project-tech-item">Redis</span>
+                </div>
+                <a href="https://github.com/multekedir/Microservice-Architecture" class="github-link" target="_blank">View on GitHub</a>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">Education</h2>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <h3 class="job-title">Bachelor of Science in Information Systems</h3>
+                    <p class="company">Western Oregon University</p>
+                    <p class="period">2017 - 2019</p>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <h3 class="job-title">Bachelor's in Computer and Information Sciences</h3>
+                    <p class="company">University of Oregon</p>
+                    <p class="period">2014 - 2018</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">Areas of Expertise</h2>
+            
+            <div class="expertise-card">
+                <h3 class="expertise-title">Software Development Engineering</h3>
+                <p class="expertise-description">
+                    Extensive experience in creating robust, scalable software solutions using modern development practices. Skilled in designing, implementing, and maintaining high-quality code across multiple platforms and languages. Proficient in understanding complex requirements and translating them into efficient, maintainable software systems that deliver tangible business value.
+                </p>
+            </div>
+            
+            <div class="expertise-card">
+                <h3 class="expertise-title">Applications and Code Designing</h3>
+                <p class="expertise-description">
+                    Strong background in architectural design and implementation of applications, with particular emphasis on creating well-structured, modular systems. Experienced in designing RESTful APIs, microservices architectures, and data-driven applications. Adept at applying design patterns and principles like SOLID to create clean, maintainable codebases that can evolve with changing requirements.
+                </p>
+            </div>
+            
+            <div class="expertise-card">
+                <h3 class="expertise-title">Cross-functional Collaboration</h3>
+                <p class="expertise-description">
+                    Proven ability to work effectively across departments and disciplines, serving as a technical bridge between different stakeholders. Experience collaborating with product managers, designers, QA teams, and business analysts to ensure alignment and successful delivery of projects. Skilled in communicating complex technical concepts to non-technical audiences and translating business needs into technical solutions.
+                </p>
+            </div>
+            
+            <div class="expertise-card">
+                <h3 class="expertise-title">Troubleshooting and Debugging</h3>
+                <p class="expertise-description">
+                    Advanced skills in identifying, isolating, and resolving complex software issues through systematic debugging approaches. Experienced in using various debugging tools and techniques to diagnose problems in diverse environments, from frontend interfaces to backend systems. Proficient in optimizing test coverage and implementing preventative measures to reduce future issues.
+                </p>
+            </div>
+            
+            <div class="expertise-card">
+                <h3 class="expertise-title">Agile and Scrum Methodologies</h3>
+                <p class="expertise-description">
+                    In-depth knowledge of Agile development frameworks with hands-on experience implementing Scrum practices in teams. Skilled in sprint planning, daily stand-ups, retrospectives, and backlog management. Experience with various Agile tools like Pivotal Tracker, JIRA, and Asana for tracking user stories, bugs, and sprint progress, ensuring continuous delivery of value.
+                </p>
+            </div>
+            
+            <div class="expertise-card">
+                <h3 class="expertise-title">Project and Time Management</h3>
+                <p class="expertise-description">
+                    Strong organizational skills with experience managing complex technical projects from conception to completion. Proficient in creating realistic timelines, managing dependencies, and allocating resources efficiently. Skilled in prioritizing tasks, adapting to changing requirements, and ensuring on-time delivery while maintaining quality standards.
+                </p>
+            </div>
+            
+            <div class="expertise-card">
+                <h3 class="expertise-title">Complex Problem Resolution</h3>
+                <p class="expertise-description">
+                    Exceptional analytical skills with a proven track record of solving intricate technical challenges. Experienced in breaking down complex problems into manageable components and developing innovative solutions. Proficient in identifying root causes of issues rather than just addressing symptoms, resulting in more robust and sustainable outcomes.
+                </p>
+            </div>
+            
+            <div class="expertise-card">
+                <h3 class="expertise-title">Cost and Time Reduction</h3>
+                <p class="expertise-description">
+                    Demonstrated ability to optimize resources and processes, resulting in significant cost and time savings. Experience in automating repetitive tasks, streamlining workflows, and implementing efficient development practices. Skilled in identifying bottlenecks and implementing targeted solutions that enhance productivity while reducing operational expenses.
+                </p>
+            </div>
+        </section>
     </div>
-
+    
     <footer>
-        <p>© 2024 Multezem Kedir. All Rights Reserved.</p>
+        <p>&copy; 2025 Multezem Kedir. All rights reserved.</p>
     </footer>
 </body>
 </html>
